@@ -1,0 +1,17 @@
+{
+  "name": "react-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd ./client && npm run start",
+    "server": "cd ./server && npm run dev",
+    "start": "concurrently 'npm run client' 'npm run server'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
