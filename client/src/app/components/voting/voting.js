@@ -52,7 +52,7 @@ const Voting = () => {
           <div className={styles.list}>
             {voting?.data.map(p => (
               <div key={p.id} className={styles.item} onClick={e => changeVoting(p.id)}>
-                {`${p.id}.  ${p.name}`}
+                {` ${p.name}`}
                 <input
                   type='checkbox'
                   checked={p.vote}

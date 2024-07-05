@@ -1,4 +1,5 @@
 import { GraphQLObjectType, GraphQLSchema } from 'graphql'
+import { getQuickInfo } from './queries/quickInfo'
 import { getPlayers, getPlayerByID } from './queries/player'
 import { addPlayer, deletePlayer, editPlayer } from './mutations/player'
 import { getTeams, getTeamByID } from './queries/teams'
@@ -10,6 +11,7 @@ import { getAttendance, getAttendanceByID } from './queries/attendance'
 const Query = new GraphQLObjectType({
   name: 'RootQuery',
   fields: {
+    getQuickInfo,
     getPlayers,
     getPlayerByID,
     getTeams,

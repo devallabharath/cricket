@@ -15,11 +15,11 @@ const Match = ({ match }) => {
   const { timestamp, teamA, teamB, won, by } = match
 
   const gotoMatch = () => {
-    navigate(match.id)
+    navigate(`/matches/${match.id}`, {state: match})
   }
 
   return (
-    <a className={styles.container} href={`/matches/${match.id}`} onClick={gotoMatch}>
+    <div className={styles.container} onClick={gotoMatch}>
       <div className={styles.team}>
         <img className={styles.logo} src={src(teamA.id)} alt='some' />
       </div>
@@ -37,7 +37,7 @@ const Match = ({ match }) => {
       <div className={styles.team}>
         <img className={styles.logo} src={src(teamB.id)} alt='some' />
       </div>
-    </a>
+    </div>
   )
 }
 
